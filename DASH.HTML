@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #003366;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+    .category {
+      margin-bottom: 1.5rem;
+    }
+    .category label {
+      font-weight: bold;
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #004080;
+      border-radius: 4px;
+      background-color: white;
+      color: #003366;
+    }
+    select:focus {
+      outline: none;
+      border-color: #0074d9;
+      box-shadow: 0 0 2px #0074d9;
+    }
+  </style>
+  <script>
+    // Redirect to the correct tool file based on folder structure
+    document.addEventListener('DOMContentLoaded', function() {
+      const toolPaths = {
+// Language & Text Utilities
+'grammar-checker': '/grammar-checker/index.html',
+'paraphraser-tool': '/paraphraser_tool/index.html',
+'summarizer': '/summarizer/index.html',
+'text-to-emoji': '/text-to-emoji-converter/text-to-emoji-converter.html',
+'text-tone-changer': '/text-tone-changer/text_tone_changer.html',
+
+// Education Tools
+'question-generator': '/question-generator/question-generator.html',
+'eli5': '/eli5/index.html',
+'flashcard-generator': '/flashcard-generator/index.html',
+
+// AI Writing Assistant
+'email-generator': '/email-generator/index.html',
+'blog-idea-expander': '/blog_idea_expander/index.html',
+'script-dialog-generator': '/script_dialog_generator/index.html',
+'resume-generator': '/resume-generator/index.html',
+
+// Multilingual & Culture
+'cross-cultural-greeting': '/cross-cultural-greeting/index.html',
+'idiom-explainer': '/idiom-explainer/index.html',
+'language-quiz': '/language-quiz/index.html',
+'mental-health': '/mental_health/index.html',
+'custom-chatbot': '/custom-chatbot/index.html',
+'news-headline': '/news-headline/index.html',
+'voiceover': '/voiceover/index.html',
+'translation-validator': '/translation-validator/index.html',
+
+// Document & Email Helpers
+'smart-letter-generator': '/smart-letter-generator/index.html',
+'summarytool': '/summarytool/index.html',
+'email-assistant': '/email_assistant/index.html',
+'report-writer': '/report-writer/index.html',
+'template-filler': '/template-filler/index.html',
+'meeting-agenda-generator': '/meeting-agenda-generator/index.html',
+'MoM': '/MoM/index.html',
+'follow-up-tracker': '/follow-up-tracker/index.html',
+
+// Productivity & HR Tools
+'multilingual-translation-assistant': '/multilingual_translation_assistant/index.html',
+'speech-to-note-transcriber': '/speech_to_note_transcriber/index.html',
+'CV-analyzer': '/CV-Analyzer/index.html',
+'interview-generator': '/interview-generator/index.html',
+'performance-feedback-writer': '/performance-feedback-writer/performance_feedback.html',
+'leave-responder': '/leave-responder/index.html',
+'employee-profile-summary': '/employee_profile_summary/employee_profile_summary.html',
+'task-generator': '/task-generator/index.html',
+'status-report-formatter': '/status-report-formatter/index.html',
+'decision-support-bot': '/decision_support_bot/index.html',
+'deadline-reminder': '/deadline_reminder/deadline_reminder.html',
+
+// Policy & Admin Tools
+'policy-checker': '/policy-checker/index.html',
+'meeting-attendance-analyzer': '/meeting_attendace_analyzer/index.html',
+'budget-summary-writer': '/budget_summary_writer/budget_summary_writer.html',
+'justification-tool': '/justification-tool/index.html',
+'asset-request': '/asset-request/asset_request.html',
+'travel-itinerary-assistant': '/travel-itinerary-assistant/index.html',
+'internal-policy-chatbot': '/internal-policy-chatbot/index.html',
+'compliance-checklist-generator': '/compliance-checklist-generator/index.html',
+'onboarding-guide-creator': '/onboarding-guide-creator/index.html',
+'file-note-generator': '/file-note-generator/index.html',
+'RTI': '/RTI/index.html'
+
+      };
+      
+      document.querySelectorAll('select').forEach(function(sel) {
+        sel.addEventListener('change', function() {
+          const toolValue = this.value;
+          if (toolValue !== "" && toolPaths[toolValue]) {
+            window.location.href = toolPaths[toolValue];
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+<header>
+  <h1>AI Tools Dashboard</h1>
+</header>
+<div class="container">
+  <div class="category">
+    <label for="language-text">Language & Text Utilities</label>
+    <select id="language-text" name="language-text">
+      <option value="">Select a tool...</option>
+      <option value="grammar-checker">Grammar Checker</option>
+      <option value="paraphraser-tool">Paraphrasing Tool</option>
+      <option value="summarizer">Summarizer</option>
+      <option value="text-to-emoji">Text to Emoji Converter</option>
+      <option value="text-tone-changer">Text Tone Changer</option>
+    </select>
+  </div>
+  <div class="category">
+    <label for="education-tools">Education Tools</label>
+    <select id="education-tools" name="education-tools">
+      <option value="">Select a tool...</option>
+      <option value="question-generator">Question Generator</option>
+      <option value="eli5">Explain Like I'm 5 (ELI5)</option>
+      <option value="flashcard-generator">Flashcard Generator</option>
+    </select>
+  </div>
+  <div class="category">
+    <label for="ai-writing-assistant">AI Writing Assistant</label>
+    <select id="ai-writing-assistant" name="ai-writing-assistant">
+      <option value="">Select a tool...</option>
+      <option value="email-generator">Email Generator</option>
+      <option value="blog-idea-expander">Blog Idea Expander</option>
+      <option value="script-dialog-generator">Script/Dialog Generator</option>
+      <option value="resume-generator">Resume Generator</option>
+    </select>
+  </div>
+  <div class="category">
+    <label for="multilingual-culture">Multilingual & Culture</label>
+    <select id="multilingual-culture" name="multilingual-culture">
+      <option value="">Select a tool...</option>
+      <option value="cross-cultural-greeting">Cross-Cultural Greeting Generator</option>
+      <option value="idiom-explainer">Proverb or Idiom Explainer</option>
+      <option value="language-quiz">Language Learning Quiz</option>
+    </select>
+  </div>
+  <div class="category">
+    <label for="other-smart-tools">Other Smart Tools</label>
+    <select id="other-smart-tools" name="other-smart-tools">
+      <option value="">Select a tool...</option>
+      <option value="mental-health">Mental Health Assistant</option>
+      <option value="custom-chatbot">Custom Chatbot Builder</option>
+      <option value="news-headline">News Headline Rewriter</option>
+      <option value="voiceover">Voiceover Script Generator</option>
+      <option value="translation-validator">Translation Validator</option>
+    </select>
+  </div>
+  <div class="category">
+    <label for="document-content-automation">Document & Content Automation</label>
+    <select id="document-content-automation" name="document-content-automation">
+      <option value="">Select a tool...</option>
+      <option value="smart-letter-generator">Smart Letter/Notice Generator</option>
+      <option value="summarytool">Auto Summary Tool</option>
+      <option value="email-assistant">Email Draft Assistant</option>
+      <option value="report-writer">Report Writer</option>
+      <option value="template-filler">Template Filler</option>
+    </select>
+  </div>
+  <div class="category">
+    <label for="meetings-communication">Meetings & Communication</label>
+    <select id="meetings-communication" name="meetings-communication">
+      <option value="">Select a tool...</option>
+      <option value="meeting-agenda-generator">Meeting Agenda Generator</option>
+      <option value="MoM">Minutes of Meeting Creator</option>
+      <option value="follow-up-tracker">Follow-up Tracker</option>
+      <option value="multilingual-translation-assistant">Multilingual Translation Assistant</option>
+      <option value="speech-to-note-transcriber">Speech-to-Note Transcriber</option>
+    </select>
+  </div>
+  <div class="category">
+    <label for="hr-staff-management">HR & Staff Management</label>
+    <select id="hr-staff-management" name="hr-staff-management">
+      <option value="">Select a tool...</option>
+      <option value="CV-analyzer">CV Analyzer</option>
+      <option value="interview-generator">Interview Question Generator</option>
+      <option value="performance-feedback-writer">Performance Feedback Writer</option>
+      <option value="leave-responder">Leave Letter Auto-Responder</option>
+      <option value="employee-profile-summary">Employee Profile Summary</option>
+    </select>
+  </div>
+  <div class="category">
+    <label for="task-workflow-automation">Task & Workflow Automation</label>
+    <select id="task-workflow-automation" name="task-workflow-automation">
+      <option value="">Select a tool...</option>
+      <option value="task-generator">Task Instruction Generator</option>
+      <option value="status-report-formatter">Status Report Formatter</option>
+      <option value="decision-support-bot">Decision Support Bot</option>
+      <option value="deadline-reminder">Deadline Reminder Generator</option>
+      <option value="policy-checker">Policy Checker Bot</option>
+    </select>
+  </div>
+  <div class="category">
+    <label for="operations-planning">Operations & Planning</label>
+    <select id="operations-planning" name="operations-planning">
+      <option value="">Select a tool...</option>
+      <option value="meeting-attendance-analyzer">Meeting Attendance Analyzer</option>
+      <option value="budget-summary-writer">Budget Summary Writer</option>
+      <option value="justification-tool">Procurement Justification Tool</option>
+      <option value="asset-request">Asset Request Form Generator</option>
+      <option value="travel-itinerary-assistant">Travel Itinerary Assistant</option>
+    </select>
+  </div>
+  <div class="category">
+    <label for="internal-chatbots-assistants">Internal Chatbots & Assistants</label>
+    <select id="internal-chatbots-assistants" name="internal-chatbots-assistants">
+      <option value="">Select a tool...</option>
+      <option value="internal-policy-chatbot">Internal Policy Chatbot</option>
+      <option value="compliance-checklist-generator">Compliance Checklist Generator</option>
+      <option value="onboarding-guide-creator">Onboarding Guide Creator</option>
+      <option value="file-note-generator">File Note Generator</option>
+      <option value="RTI">RTI/DARPG Draft Generator</option>
+    </select>
+  </div>
+</div>
+<footer>
+  Designed and Developed By ITG
+</footer>
+</body>
+</html>

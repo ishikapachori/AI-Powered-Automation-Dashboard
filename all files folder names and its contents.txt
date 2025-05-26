@@ -1,0 +1,51 @@
+grammar-checker index.html grammar_check.php
+paraphraser_tool index.html paraphrase.php
+summarizer index.html  Summarizer.php
+text-to-emoji-converter  backend-php.php text-to-emoji-converter.html
+text-tone-changer php_backend.php text_tone_changer.html
+question-generator question-generator.php question-generator.html
+eli5 index.html backend.php
+flashcard-generator  generate_flashcards.php index.html
+email-generator generate_email.php index.html
+blog_idea_expander index.html backend.php
+script_dialog_generator generate.php index.html
+resume-generator  generate.php  OllamaClient.php  index.html
+cross-cultural-greeting greeting_generator.php index.html
+idiom-explainer index.html explain.php
+language-quiz  index.html backend.php
+mental_health index.html mental_health_bot.php
+custom-chatbot index.html folder api build-bot.php chat.php
+news-headline index.html backend.php
+voiceover index.html backend.php
+translation-validator validate_translation.php index.html
+smart-letter-generator generate_document.php index.html
+summarytool summarize.php index.html
+email_assistant email_assistant.php index.html
+report-writer report.php index.html
+template-filler index.html folder api ai_suggestions.php process_template.php
+meeting-agenda-generator index.html folder api generate_agenda.php
+MoM process_meeting.php index.html 
+follow-up-tracker index.html backend.php
+multilingual_translation_assistant index.html backend.php
+speech_to_note_transcriber index.html backend.php
+CV-Analyzer analyze.php index.html 
+interview-generator index.html folder api generate_questions.php
+performance-feedback-writer performance_feedback.html feedback_generator.php
+leave-responder  generate.php index.html script.js style.css
+employee_profile_summary employee_profile_summary.html profile_summary_generator.php
+task-generator  index.html process.php
+status-report-formatter generate.php index.html script.js style.css
+decision_support_bot ask.php index.html
+deadline_reminder reminder_api.php deadline_reminder.html
+policy-checker index.html check.php app.js
+meeting_attendace_analyzer index.html process_attendance.php
+budget_summary_writer budget_summary_writer.html budget_api.php
+justification-tool index.html generate.php
+asset-request asset_request.html generate_request.php
+travel-itinerary-assistant index.html backend.php
+internal-policy-chatbot chatbot.php  index.html
+compliance-checklist-generator compliance_checklist.php index.html
+onboarding-guide-creator generate.php index.html 
+file-note-generator generate.php index.html 
+RTI index.html generate_draft.php
+
